@@ -1,0 +1,58 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  window_state = fullscreen
+  focus = system
+  handle_size = 0
+  title_transmit_bg_color = "#50a4bf"
+[keybindings]
+  toggle_zoom = <Alt>x
+  search = <Alt>f
+  close_window = <Alt>q
+  paste = <Alt>v
+  broadcast_group = <Shift><Alt>b
+  split_horiz = <Shift><Alt>d
+  move_tab_right = <Shift><Alt>Left
+  close_term = <Alt>w
+  split_vert = <Alt>d
+  broadcast_off = <Shift><Alt>n
+  new_tab = <Alt>t
+  move_tab_left = <Shift><Alt>Left
+  copy = <Alt>c
+  hide_window = <Alt>h
+[profiles]
+  [[default]]
+    palette = "#425f66:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#586e75:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    visible_bell = True
+    use_system_font = False
+    cursor_color = "#eee8d5"
+    foreground_color = "#eee8d5"
+    font = Monospace 11
+    background_color = "#002b36"
+    scrollback_infinite = True
+  [[solarized-dark]]
+    palette = "#425f66:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#586e75:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    visible_bell = True
+    use_system_font = False
+    cursor_color = "#eee8d5"
+    foreground_color = "#eee8d5"
+    font = Monospace 11
+    background_color = "#002b36"
+  [[solarized-light]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    background_color = "#eee8d5"
+    cursor_color = "#002b36"
+    foreground_color = "#002b36"
+[layouts]
+  [[default]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1080
+    [[[terminal1]]]
+      profile = solarized-dark
+      type = Terminal
+      order = 0
+      parent = child0
+[plugins]
