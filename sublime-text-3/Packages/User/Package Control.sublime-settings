@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Agila Theme",
+		"All Autocomplete",
+		"Anaconda",
+		"AutoDocstring",
+		"Diffy",
+		"DocBlockr",
+		"JsFormat",
+		"Markdown Preview",
+		"Modific",
+		"Monokai - Spacegray",
+		"Package Control",
+		"Predawn",
+		"Predawn Monokai",
+		"Seti_UI",
+		"Seti_UX",
+		"SideBarEnhancements",
+		"Sunrise Theme",
+		"Theme - Soda",
+		"Theme - Soda SolarizedDark",
+		"Theme - Sodarized",
+		"Theme - Spacegray"
+	]
+}

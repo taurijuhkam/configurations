@@ -1,0 +1,6 @@
+{
+    "anaconda_gutter_marks": false,
+    "anaconda_linter_mark_style": "stippled_underline",
+    "pep8_max_line_length": 119,
+    "enable_signatures_tooltip": false,
+}
