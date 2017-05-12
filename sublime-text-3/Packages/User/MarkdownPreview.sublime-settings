@@ -1,5 +1,5 @@
 {
     // banksyst help css
     "css": ["/home/dev/svn/bs_core/trunk/app/apache/tietoenator/htdocs/css/help.css"],
-    "enabled_parsers": ["markdown"],
+    "enabled_parsers": ["github"],
 }

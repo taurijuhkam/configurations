@@ -1,66 +1,65 @@
 [global_config]
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  window_state = fullscreen
   focus = system
   handle_size = 0
   title_transmit_bg_color = "#50a4bf"
+  window_state = fullscreen
 [keybindings]
-  toggle_zoom = <Alt>x
-  search = <Alt>f
-  close_window = <Alt>q
-  paste = <Ctrl><Shift>V
   broadcast_group = <Shift><Alt>b
-  split_horiz = <Shift><Alt>d
-  move_tab_right = <Shift><Alt>Left
-  close_term = <Alt>w
-  split_vert = <Alt>d
   broadcast_off = <Shift><Alt>n
-  new_tab = <Alt>t
-  move_tab_left = <Shift><Alt>Left
+  close_term = <Alt>w
+  close_window = <Alt>q
   copy = <Ctrl><Shift>C
   hide_window = <Alt>h
-[profiles]
-  [[default]]
-    palette = "#d6d2c3:#fd444f:#51ab09:#b58900:#44a2e3:#f06ca4:#2aa198:#eee8d5:#e2ddcf:#ff6318:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    background_darkness = 1.1
-    background_type = transparent
-    use_system_font = False
-    cursor_color = "#eee8d5"
-    foreground_color = "#e2ddcf"
-    exit_action = hold
-    font = Monospace 11
-    background_color = "#163c45"
-    allow_bold = False
-    scrollback_infinite = True
-  [[solarized-light]]
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    background_color = "#eee8d5"
-    exit_action = hold
-    cursor_color = "#002b36"
-    foreground_color = "#002b36"
-  [[system_default]]
-    exit_action = hold
+  move_tab_left = <Shift><Alt>Left
+  move_tab_right = <Shift><Alt>Left
+  new_tab = <Alt>t
+  paste = <Ctrl><Shift>V
+  search = <Alt>f
+  split_horiz = <Shift><Alt>d
+  split_vert = <Alt>d
+  toggle_zoom = <Alt>x
 [layouts]
   [[default]]
     [[[child0]]]
-      position = 0:0
-      type = Window
+      fullscreen = True
+      last_active_term = a3c4481b-e2b0-489d-b903-547a77c57faa
+      last_active_window = True
+      maximised = False
       order = 0
       parent = ""
+      position = 0:0
       size = 1920, 1080
-    [[[child1]]]
-      position = 186
-      type = VPaned
+      title = tauri@taurij: ~
+      type = Window
+    [[[terminal1]]]
       order = 0
       parent = child0
-    [[[terminal3]]]
       profile = default
       type = Terminal
-      order = 1
-      parent = child1
-    [[[terminal2]]]
-      profile = default
-      type = Terminal
-      order = 0
-      parent = child1
+      uuid = a3c4481b-e2b0-489d-b903-547a77c57faa
 [plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_color = "#163c45"
+    background_darkness = 0.93
+    background_image = None
+    background_type = transparent
+    cursor_color = "#eee8d5"
+    exit_action = hold
+    font = Ubuntu Mono 13
+    foreground_color = "#e2ddcf"
+    palette = "#d6d2c3:#fd444f:#3ba226:#b58900:#44a2e3:#f06ca4:#2aa198:#eee8d5:#e2ddcf:#ff6318:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollback_infinite = True
+    use_system_font = False
+  [[solarized-light]]
+    background_color = "#eee8d5"
+    background_image = None
+    cursor_color = "#002b36"
+    exit_action = hold
+    foreground_color = "#002b36"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+  [[system_default]]
+    background_image = None
+    exit_action = hold
