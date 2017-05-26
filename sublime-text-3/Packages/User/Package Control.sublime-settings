@@ -11,6 +11,7 @@
 		"AutoDocstring",
 		"Diffy",
 		"DocBlockr",
+		"HTMLBeautify",
 		"JsFormat",
 		"Markdown Preview",
 		"Markdown Table Formatter",
