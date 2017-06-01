@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"Agila Theme",
 		"All Autocomplete",
 		"Anaconda",
 		"AutoDocstring",
@@ -23,10 +22,7 @@
 		"Seti_UI",
 		"Seti_UX",
 		"SideBarEnhancements",
-		"Sunrise Theme",
-		"Theme - Soda",
-		"Theme - Soda SolarizedDark",
-		"Theme - Sodarized",
+		"Theme - Solarized Space",
 		"Theme - Spacegray"
 	]
 }
