@@ -22,6 +22,11 @@
 		"Seti_UI",
 		"Seti_UX",
 		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pyflakes",
 		"Theme - Solarized Space",
 		"Theme - Spacegray"
 	]

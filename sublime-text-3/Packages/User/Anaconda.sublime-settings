@@ -4,6 +4,7 @@
     "pep8_max_line_length": 119,
     "enable_signatures_tooltip": false,
     "test_command": "python -m unittest",
+    "anaconda_linting": false,
     "autoformat_ignore":
     [
         "E309",
