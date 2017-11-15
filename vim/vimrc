@@ -1,0 +1,36 @@
+" also look at https://vimawesome.com/
+filetype plugin indent on
+syntax on
+
+set number
+set encoding=utf-8
+set autoindent
+set ruler
+
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=light
+
+" Tabs to 4 spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" autocomplete vim commands
+set wildmenu
+set wildmode=longest:list,full
+
+
+"Remap split navigations to movement keys
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"Netrw parameters
+let g:netrw_banner = 0       " do not show header
+let g:netrw_liststyle = 3    " Display in a tree
+let g:netrw_browse_split = 4 " Open in previous window
+let g:netrw_altv = 1         " Open files to the right
+let g:netrw_winsize = 15
