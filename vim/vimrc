@@ -4,10 +4,16 @@ syntax on
 
 set number
 set encoding=utf-8
-set autoindent
+set noautoindent " not too sure but otherwise pasting is messed up
 set ruler
 set t_BE= " fix weird pasting in unix
 set t_Co=16
+set path+=** " path relative to current working dir
+set hls " hilight searches
+set is  " incremental search
+set ic  " ignore case
+set splitright " splits open to the left
+set splitbelow " splits open below, not above curren slip
 
 " Tabs to 4 spaces
 set tabstop=4
@@ -33,12 +39,17 @@ let g:netrw_browse_split = 4 " Open in previous window
 let g:netrw_altv = 1         " Open files to the right
 let g:netrw_winsize = 15
 
-" CtrlP mappings https://github.com/kien/ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 0 
-
 let g:airline_powerline_fonts = 1
 let g:airline_theme="solarized"
-let g:airline_solarized_bg='dark'
-let g:airline_solarized_bg='dark'
+" let g:airline_solarized_bg='dark'
+
+" syntax for plsql and dpyml
+autocmd BufRead,BufNewFile *.dpyml set syntax=dpyml
+autocmd BufRead,BufNewFile *.sql set syntax=plsql
+
+" toggle relative numbers in insert mode ? maybe
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
