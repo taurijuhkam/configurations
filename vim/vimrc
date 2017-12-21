@@ -6,10 +6,8 @@ set number
 set encoding=utf-8
 set autoindent
 set ruler
-
-let g:solarized_termcolors=256
-colorscheme solarized
-set background=light
+set t_BE= " fix weird pasting in unix
+set t_Co=16
 
 " Tabs to 4 spaces
 set tabstop=4
@@ -34,3 +32,13 @@ let g:netrw_liststyle = 3    " Display in a tree
 let g:netrw_browse_split = 4 " Open in previous window
 let g:netrw_altv = 1         " Open files to the right
 let g:netrw_winsize = 15
+
+" CtrlP mappings https://github.com/kien/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 0 
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme="solarized"
+let g:airline_solarized_bg='dark'
+let g:airline_solarized_bg='dark'
