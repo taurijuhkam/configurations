@@ -24,7 +24,8 @@ set expandtab
 " autocomplete vim commands
 set wildmenu
 set wildmode=longest:list,full
-
+set autoread " automatically refreshing tabs
+au FocusGained,BufEnter * :checktime " for autoread to work
 
 "Remap split navigations to movement keys
 nnoremap <C-J> <C-W><C-J>
@@ -47,9 +48,22 @@ let g:airline_theme="solarized"
 autocmd BufRead,BufNewFile *.dpyml set syntax=dpyml
 autocmd BufRead,BufNewFile *.sql set syntax=plsql
 
-" toggle relative numbers in insert mode ? maybe
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
+" CTRL-L to toggle line numbers
+function! g:ToggleNuMode()
+  if &rnu == 1
+   set nornu
+     else
+  set rnu
+    endif
+endfunction
+nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
+
+" Signify plugin
+let g:signify_vcs_list = [ 'git', 'svn' ] " limit to git and svn
+" let g:signify_realtime = 0  " realtime updateing
+let g:signify_sign_delete = '-'
+let g:signify_sign_change = '~'
+
+highlight DiffAdd           cterm=bold ctermbg=none ctermfg=28
+highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
+highlight DiffChange        cterm=bold ctermbg=none ctermfg=172
