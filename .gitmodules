@@ -7,3 +7,6 @@
 [submodule "vim/vim/pack/plugins/start/vim-signify"]
 	path = vim/vim/pack/plugins/start/vim-signify
 	url = https://github.com/mhinz/vim-signify
+[submodule "vim/vim/pack/plugins/start/YouCompleteMe"]
+	path = vim/vim/pack/plugins/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
