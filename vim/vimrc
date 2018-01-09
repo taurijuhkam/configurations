@@ -14,6 +14,7 @@ set is  " incremental search
 set ic  " ignore case
 set splitright " splits open to the left
 set splitbelow " splits open below, not above current split
+set signcolumn=yes " always show sign column
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=7
 
@@ -74,3 +75,12 @@ highlight DiffChange        cterm=bold ctermbg=none ctermfg=172
 " YouCompleteMe params
 let g:ycm_python_binary_path = '/usr/bin/python3'
 
+" Syntastic params
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
