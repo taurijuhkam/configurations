@@ -15,9 +15,10 @@ set ic  " ignore case
 set splitright " splits open to the left
 set splitbelow " splits open below, not above current split
 set signcolumn=yes " always show sign column
-set backspace=indent,eol,start
-set autoread
-set cursorline
+set backspace=indent,eol,start " make backspace work on mac
+set autoread 
+set cursorline " highligh cursorline
+set clipboard=unnamedplus " copy to system clipboard
 hi CursorLine   cterm=NONE ctermbg=7
 
 " Tabs to 4 spaces
@@ -76,6 +77,7 @@ highlight DiffChange        cterm=bold ctermbg=none ctermfg=172
 
 " YouCompleteMe params
 let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " Syntastic params
 set statusline+=%#warningmsg#
