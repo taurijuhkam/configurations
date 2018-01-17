@@ -2,8 +2,8 @@
 filetype plugin indent on
 syntax on
 
-set number
-set encoding=utf-8
+set number " line numbers
+set encoding=utf-8 
 set noautoindent " not too sure but otherwise pasting is messed up
 set ruler
 set t_BE= " fix weird pasting in unix
@@ -16,7 +16,6 @@ set splitright " splits open to the left
 set splitbelow " splits open below, not above current split
 set signcolumn=yes " always show sign column
 set backspace=indent,eol,start " make backspace work on mac
-set autoread 
 set cursorline " highligh cursorline
 set clipboard=unnamedplus " copy to system clipboard
 hi CursorLine   cterm=NONE ctermbg=7
@@ -33,18 +32,12 @@ set wildmode=longest:list,full
 set autoread " automatically refreshing tabs
 au FocusGained,BufEnter * :checktime " for autoread to work
 
-"Remap split navigations to movement keys
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 "Netrw parameters
 let g:netrw_banner = 0       " do not show header
 let g:netrw_liststyle = 3    " Display in a tree
 let g:netrw_browse_split = 4 " Open in previous window
 let g:netrw_altv = 1         " Open files to the right
-let g:netrw_winsize = 15
+let g:netrw_winsize = 20     " initial window size
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme="solarized"
@@ -54,16 +47,6 @@ let g:airline_theme="solarized"
 autocmd BufRead,BufNewFile *.dpyml set syntax=dpyml
 autocmd BufRead,BufNewFile *.sql set syntax=plsql
 
-" CTRL-L to toggle line numbers
-function! g:ToggleNuMode()
-  if &rnu == 1
-   set nornu
-     else
-  set rnu
-    endif
-endfunction
-" map toggling line numbers to <F4>
-nnoremap <silent><F4> :call g:ToggleNuMode()<cr>
 
 " Signify plugin
 let g:signify_vcs_list = [ 'git', 'svn' ] " limit to git and svn
@@ -78,6 +61,9 @@ highlight DiffChange        cterm=bold ctermbg=none ctermfg=172
 " YouCompleteMe params
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_seed_identifiers_with_syntax = 1 " language identifiers
 
 " Syntastic params
 set statusline+=%#warningmsg#
@@ -88,8 +74,38 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" Markdown
+
+" Markdown preview
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
 
+" ----------- Custom functions    -----------------
 
+" function to toggle line numbers
+function! g:ToggleNuMode()
+  if &rnu == 1
+   set nornu
+     else
+  set rnu
+    endif
+endfunction
+
+" ----------- Key mappings section ----------------
+"Remap split navigations to movement keys
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" map toggling line numbers to <F4>
+nnoremap <silent><F4> :call g:ToggleNuMode()<cr>
+
+" map space to leader
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" map leader-dd to go to definition
+nnoremap <leader>dd :YcmCompleter GoTo<CR>
+
+" map leader-d to show documentation
+nnoremap <leader>d :YcmCompleter GetDoc<CR>
