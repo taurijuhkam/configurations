@@ -17,7 +17,12 @@ set splitbelow " splits open below, not above current split
 set signcolumn=yes " always show sign column
 set backspace=indent,eol,start " make backspace work on mac
 set cursorline " highligh cursorline
-set clipboard=unnamedplus " copy to system clipboard
+if system('uname -s') == "Darwin\n"
+      set clipboard=unnamed "OSX
+  else
+    set clipboard=unnamedplus "Linux
+endif
+
 hi CursorLine   cterm=NONE ctermbg=7
 
 " Tabs to 4 spaces
