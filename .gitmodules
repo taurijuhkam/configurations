@@ -16,6 +16,3 @@
 [submodule "vim/vim/pack/plugins/start/vim-markdown-preview"]
 	path = vim/vim/pack/plugins/start/vim-markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview
-[submodule "vim/vim/pack/plugins/start/vim-grammarous"]
-	path = vim/vim/pack/plugins/start/vim-grammarous
-	url = https://github.com/rhysd/vim-grammarous
