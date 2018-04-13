@@ -17,6 +17,7 @@ set splitbelow " splits open below, not above current split
 set signcolumn=yes " always show sign column
 set backspace=indent,eol,start " make backspace work on mac
 set cursorline " highligh cursorline
+set wildignore=*.pyc
 if system('uname -s') == "Darwin\n"
       set clipboard=unnamed "OSX
   else
@@ -79,6 +80,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pylint']
 
 " Markdown preview
 let vim_markdown_preview_github=1
@@ -104,6 +106,8 @@ nnoremap <C-H> <C-W><C-H>
 
 " map toggling line numbers to <F4>
 nnoremap <silent><F4> :call g:ToggleNuMode()<cr>
+" Map <F2> to toggle Lex
+nnoremap <silent><F2> :Lexplore<cr>
 
 " map space to leader
 nnoremap <SPACE> <Nop>
