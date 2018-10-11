@@ -1,7 +1,7 @@
 " also look at https://vimawesome.com/
 filetype plugin indent on
 syntax on
-
+set nocompatible
 set number " line numbers
 set encoding=utf-8 
 set noautoindent " not too sure but otherwise pasting is messed up
@@ -118,3 +118,6 @@ nnoremap <leader>dd :YcmCompleter GoTo<CR>
 
 " map leader-d to show documentation
 nnoremap <leader>d :YcmCompleter GetDoc<CR>
+
+" dbtext oracle connection
+let g:dbext_default_profile_myORA = 'type=ORA:srvname=localhost:user=banksyst:passwd=vibalik'
